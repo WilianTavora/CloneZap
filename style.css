@@ -1,132 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: sans-serif;
 }
-
-body{
+body
+{
+    width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: #f2eadf;
+    background: linear-gradient(#cccc, #2e2652);
 }
-.container{
+.container
+{
     position: relative;
-    width: 340px;
-    height: 600px;
     background: #ffff;
-    box-shadow: 0 5px 5px rgba(0, 0, 0,0.15);
+    width: 30em;
+    height: 35em;
     overflow: hidden;
 }
-header{
-    position: relative;
-    background: #008069;
-    padding: 20px 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-header .logo{
-    color: #ffff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1em;
-}
-header .action{
-    position: relative;
-    display: flex;
-    gap: 15px;
-}
-header .action a
-{
-    color: #ffff;
-    display: flex;
-    font-size: 1,5em;
-    text-decoration: none;
-}
-
 .tabs input{
     visibility: hidden;
     display: none;
 }
-.buttons{
+.content{
     position: relative;
-    display: flex;
-    background: #008069;
-    border-bottom: 1px solid rgba(0, 0, 0,0.25);
-}
-
-.buttons label{
-    width: 33.33%;
-    color: #ffff;
-    opacity: 0.75;
-    text-align: center;
-    padding: 5px 0;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 0.9em;
-    cursor: pointer;
-}
-.tabs input:nth-child(1):checked ~ .buttons label:nth-child(1),
-.tabs input:nth-child(2):checked ~ .buttons label:nth-child(2),
-.tabs input:nth-child(3):checked ~ .buttons label:nth-child(3)
-{
-    opacity: 1;
-}
-
-.underline
-{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 33.333%;
-    height: 3px;
-    background: #ffff;
-    transition: .5s;
-}
-.tabs input:nth-child(1):checked ~ .buttons .underline
-{
-    left: 0;
-}
-.tabs input:nth-child(2):checked ~ .buttons .underline
-{
-    left: 33.333%;
-}
-.tabs input:nth-child(3):checked ~ .buttons .underline
-{
-    left: 66.666%;
-}
-
-.content
-{
-    position: relative;
-    width: calc(340px*3);
-    display: flex;
+    width: calc(30em*4);
+    height: 30em;
+    background: #ccee;
     transition: 0.5s;
+    display: flex;
     overflow: hidden;
 }
-
-.content .box
-{
+.tabs .buttons{
     position: relative;
-    width: 340px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5em;
+    background: blue;
+}
+.tabs .buttons label{
+    position: relative;
+    cursor: pointer;
+    margin-left: 2em;
+}
 
+.content .box{
+    position: relative;
+    width: 30em;
 }
 
 .tabs input:nth-child(1):checked ~ .content
 {
-    left: calc(340px*0);
+    left: calc(30em*0);
 }
 .tabs input:nth-child(2):checked ~ .content
 {
-    left: calc(340px*-1);
+    left: calc(30em*-1);
 }
 .tabs input:nth-child(3):checked ~ .content
 {
-    left: calc(340px*-2);
+    left: calc(30em*-2);
 }
-
-
+.tabs input:nth-child(4):checked ~ .content
+{
+    left: calc(30em*-3);
+}
