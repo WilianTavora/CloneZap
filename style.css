@@ -87,8 +87,12 @@ body
     width: 100%;
     text-align: center;
     font-weight: 500;
-    
-}
 
+}
+.buttons ul li a label .icon{
+    position: relative;
+    display: block;
+    line-height: 5em;
+}
 
 
