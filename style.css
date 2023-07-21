@@ -21,6 +21,7 @@ body
     background: #ffff;
     width: 30em;
     height: 35em;
+    border-radius: 1em;
     overflow: hidden;
 }
 .tabs input{
@@ -36,20 +37,6 @@ body
     display: flex;
     overflow: hidden;
 }
-.tabs .buttons{
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 5em;
-    background: blue;
-}
-.tabs .buttons label{
-    position: relative;
-    cursor: pointer;
-    margin-left: 2em;
-}
-
 .content .box{
     position: relative;
     width: 30em;
@@ -71,3 +58,37 @@ body
 {
     left: calc(30em*-3);
 }
+
+.tabs .buttons{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5em;
+    background: #f2f2f2;
+}
+.buttons ul{
+    display: flex;
+    width: 30em;
+}
+.buttons ul li{
+    position: relative;
+    list-style: none;
+    width: 7.5em;
+    height: 5em;
+    z-index: 1;
+}
+.buttons ul li a label{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    
+}
+
+
+
