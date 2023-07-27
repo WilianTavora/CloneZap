@@ -74,9 +74,9 @@ body
 .buttons ul li{
     position: relative;
     list-style: none;
-    width: 7.5em;
+    width: 25%;
     height: 5em;
-    z-index: 1;
+    z-index: 2;
 }
 .buttons ul li a label{
     position: relative;
@@ -87,12 +87,33 @@ body
     width: 100%;
     text-align: center;
     font-weight: 500;
-
 }
 .buttons ul li a label .icon{
     position: relative;
     display: block;
     line-height: 5em;
+    transition: 0.5s;
+    
+}
+.buttons ul li:hover a label .icon{
+    transform: translateY(-20px);
 }
 
+.buttons ul li a label .text{
+    position: absolute;
+    color: #f2f2f2;
+    background: rgb(43, 43, 240);
+    border-radius: 1em;
+    padding: 0.20em 0.50em;
+    font-size: 0.75em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);   
+}
+.buttons ul li:hover a label .text{
+    opacity: 1;
+    transform: translateY(10px);
+}
 
